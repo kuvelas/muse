@@ -99,6 +99,7 @@ var netCollect = (function() {
             netStatsDB.open(collectCycle());
           }
         });
+        //netStatsDB.open(collectCycle());
       };
       
     }else{
@@ -119,7 +120,7 @@ var netCollect = (function() {
     var d = new Date();
     var alarmId; 
     //Calculate next collection cycle to the second
-    var timeout = (minutes - d.getMinutes() % minutes) * oneMinute - (d.getSeconds() * oneSecond);
+    var timeout = 10000; //(minutes - d.getMinutes() % minutes) * oneMinute - (d.getSeconds() * oneSecond);
     
     d.setTime(d.getTime() + timeout); 
 
@@ -411,4 +412,4 @@ var netCollect = (function() {
 
 
 //This is commented out when committing to github. Should be activated in services.js asap
-//netCollect.activate(3);
+netCollect.activate(3);
