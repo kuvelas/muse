@@ -20,7 +20,7 @@ var fetcher = {
         //query country code
         $.get("http://ipinfo.io/json", function (data) {
             country = data.country;
-            country = "br";// testing
+            //country = "br";// testing
             //translate country code to google news edition code
             //Unfortunately, there is no programmactical way to do this. So if have time,
             // I'll come back to cover all the country that Firefox phone targets

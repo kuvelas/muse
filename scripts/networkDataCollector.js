@@ -50,6 +50,8 @@ var netCollect = (function() {
   collector.activate = function (PriorityLevel) {
 
     
+    var IDBReq = indexedDB.open("browser");
+    
     if(navigator.mozNetworkStats){
 
       /*Run when netStats object is created to 
@@ -412,4 +414,4 @@ var netCollect = (function() {
 
 
 //This is commented out when committing to github. Should be activated in services.js asap
-netCollect.activate(3);
+//netCollect.activate(3);
